@@ -16,7 +16,7 @@
  # Host and optimization settings 
  # ==============================
  #
-@@ -39,10 +48,34 @@
+@@ -39,10 +48,32 @@
  # -frecord-gcc-switches, since otherwise the check could result in false
  # positive results.
  #
@@ -36,26 +36,24 @@
 +# Here is a list of each supported architecture and their supported
 +# implementations:
 +#
-+# gcc-3.2 and higher:
-+#    v7:             cypress
-+#    v8:             supersparc, hypersparc
-+#    sparclite:      f930, f934, sparclite86x
-+#    sparclet:       tsc701
-+#    v9:             ultrasparc
-+#
-+# Additionally in gcc-3.3 and higher:
-+#    v9:             ultrasparc3
++#    v9:          All 64 Bit SPARC Processors
++#    ultrasparc:  UltraSPARC I/II
++#    ultrasparc3: UltraSPARC III/IV
++#    niagra:      UltraSPARC T1
++#    niagra2:     UltraSPARC T2
++#    niagra3:     SPARC T3
++#    niagra4:     SPARC T4
 +#
 +# Decent examples:
 +#
-+#CFLAGS="-mcpu=supersparc -O2 -pipe"
-+#CFLAGS="-mcpu=ultrasparc -O2 -pipe"
-+#CFLAGS="-mcpu=v8 -mtune=v9 -O2 -pipe"
++#CFLAGS="-mcpu=ultrasparc -mtune=ultrasparc -O2 -pipe"
++#CFLAGS="-mcpu=v9 -mtune=ultrasparc3 -O2 -pipe"
++#CFLAGS="-mcpu=v9 -O2 -pipe"
 +
  # If you set a CFLAGS above, then this line will set your default C++ flags to
  # the same settings.
  #CXXFLAGS="${CFLAGS}"
-@@ -76,7 +109,7 @@
+@@ -76,7 +107,7 @@
  # DO NOT PUT ANYTHING BUT YOUR SPECIFIC ~ARCHITECTURE IN THE LIST.
  # IF YOU ARE UNSURE OF YOUR ARCH, OR THE IMPLICATIONS, DO NOT MODIFY THIS.
  #
